@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr1 = ['강아지', '고양이', '토끼', '펭귄']
+        const arr2 = arr1.concat()
+        const arr3 = [...arr1]
+
+        //추가
+        const arr4 = arr1.concat('코끼리', '기린')
+        const arr5 = [...arr1, '코끼리', '기린']
+        console.log('arr1 = ' + arr1)
+        console.log('arr2 = ' + arr2)
+        console.log('arr3 = ' + arr3)
+        console.log('arr4 = ' + arr4)
+        console.log('arr5 = ' + arr5)
+
+        console.log('------------')
+
+        //배열에서는 추가가 되지만, json객체에서는 덮어쓰는 효과가 들어감 (spread연산자)
+        const dog1 = {
+            name: '멍멍이',
+            age: 2
+        }
+
+        const dog2 = { ...dog1, name:'진돗개', age:5}
+        console.log(dog2)
+    </script>
+</body>
+</html>
+<!--
+    ... (전개 연산자)
+-->
